@@ -1,0 +1,110 @@
+/* Above-the-fold content must never depend on animation or script timing. */
+.hero .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.phone-break { display: none; }
+
+/* Keep the temporary video indicator out of the hero copy area. */
+.video-placeholder {
+  display: block;
+}
+
+.video-placeholder .play {
+  position: absolute;
+  top: 42%;
+  right: 13%;
+}
+
+.video-placeholder .video-label {
+  top: calc(42% + 112px);
+  right: calc(13% - 54px);
+  width: 200px;
+  margin: 0;
+  text-align: center;
+}
+
+/* Explicit breakpoint ownership keeps the mobile control dependable. */
+.menu-button {
+  display: block;
+  flex: 0 0 44px;
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 50%;
+}
+
+@media (min-width: 901px) {
+  .menu-button { display: none; }
+}
+
+.credentials { background: #e6ded0; border-bottom: 1px solid rgba(17,16,14,.14); }
+.credential-grid { display: grid; grid-template-columns: repeat(4,1fr); }
+.credential-grid > div { padding: 38px 24px; border-right: 1px solid rgba(17,16,14,.14); }
+.credential-grid > div:last-child { border: 0; }
+.credential-grid strong { display: block; font: 400 42px/1 "Instrument Serif",serif; }
+.credential-grid span { display: block; margin-top: 8px; font-size: 10px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: #665e53; }
+.audience { background: #11100e; color: #fff; }
+.audience-grid,.founder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 9vw; }
+.audience-copy { color: #a9a197; font-size: 18px; }
+.audience-copy p { margin: 0 0 22px; }
+.audience-tags,.specialties { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; }
+.audience-tags span,.specialties span { padding: 8px 13px; border: 1px solid rgba(255,255,255,.2); border-radius: 50px; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.founder { background: #f3eee4; }
+.photo-placeholder { overflow: hidden; background-image: linear-gradient(135deg,rgba(255,255,255,.16),transparent 45%),repeating-linear-gradient(45deg,transparent,transparent 18px,rgba(17,16,14,.035) 18px,rgba(17,16,14,.035) 19px); }
+.founder-copy { color: #625a51; font-size: 17px; }
+.founder-copy p { margin: 0 0 20px; }
+.founder-lead { font: italic 400 32px/1.2 "Instrument Serif",serif; color: #11100e; }
+.specialties span { border-color: rgba(17,16,14,.2); color: #11100e; }
+.contact-details { margin: 28px 0; border-top: 1px solid rgba(255,255,255,.15); }
+.contact-details a,.contact-details p { display: block; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.15); color: #fff; text-decoration: none; margin: 0; overflow-wrap: anywhere; }
+.contact-details small { display: block; margin: 0 0 2px; color: #8f887f; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .menu-button {
+    display: block;
+    flex: 0 0 44px;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+  }
+  .credential-grid { grid-template-columns: 1fr 1fr; }
+  .credential-grid > div:nth-child(2) { border-right: 0; }
+  .credential-grid > div { border-bottom: 1px solid rgba(17,16,14,.14); }
+  .audience-grid,.founder-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+@media (max-width: 600px) {
+  .shell {
+    width: min(calc(100% - 40px), var(--max));
+  }
+
+  .hero h1 {
+    font-size: clamp(3.1rem, 14.5vw, 4.4rem);
+  }
+  .phone-break { display: inline; }
+
+  .hero-copy { max-width: calc(100vw - 40px); }
+
+  .video-placeholder .play {
+    top: 16%;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .video-placeholder .video-label {
+    top: calc(16% + 90px);
+    right: auto;
+    left: 50%;
+    width: min(260px, calc(100% - 40px));
+    margin: 0;
+    transform: translateX(-50%);
+  }
+  .credential-grid { grid-template-columns: 1fr; }
+  .credential-grid > div { border-right: 0; padding: 25px 4px; display: grid; grid-template-columns: 95px 1fr; align-items: center; gap: 16px; }
+  .credential-grid strong { font-size: 34px; }
+  .credential-grid span { margin: 0; }
+}
