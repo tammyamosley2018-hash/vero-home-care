@@ -11,18 +11,17 @@
   display: block;
 }
 
-.video-placeholder .play {
+.hero-video iframe {
   position: absolute;
-  top: 42%;
-  right: 13%;
-}
-
-.video-placeholder .video-label {
-  top: calc(42% + 112px);
-  right: calc(13% - 54px);
-  width: 200px;
-  margin: 0;
-  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 177.78vh;
+  height: 56.25vw;
+  min-width: 100%;
+  min-height: 100%;
+  border: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
 }
 
 /* Explicit breakpoint ownership keeps the mobile control dependable. */
@@ -103,21 +102,6 @@
 
   .hero-copy { max-width: calc(100vw - 40px); }
 
-  .video-placeholder .play {
-    top: 16%;
-    right: auto;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .video-placeholder .video-label {
-    top: calc(16% + 90px);
-    right: auto;
-    left: 50%;
-    width: min(260px, calc(100% - 40px));
-    margin: 0;
-    transform: translateX(-50%);
-  }
   .credential-grid { grid-template-columns: 1fr; }
   .credential-grid > div { border-right: 0; padding: 25px 4px; display: grid; grid-template-columns: 95px 1fr; align-items: center; gap: 16px; }
   .credential-grid strong { font-size: 34px; }
