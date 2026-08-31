@@ -57,6 +57,9 @@
 }
 
 .credentials { background: #e6ded0; border-bottom: 1px solid rgba(17,16,14,.14); }
+.promise-grid { display: block; }
+.promise-copy { max-width: 940px; margin: 0 auto; }
+.promise-copy .display { max-width: 850px; }
 .credential-grid { display: grid; grid-template-columns: repeat(4,1fr); }
 .credential-grid > div { padding: 38px 24px; border-right: 1px solid rgba(17,16,14,.14); }
 .credential-grid > div:last-child { border: 0; }
@@ -69,7 +72,6 @@
 .audience-tags,.specialties { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 34px; }
 .audience-tags span,.specialties span { padding: 8px 13px; border: 1px solid rgba(255,255,255,.2); border-radius: 50px; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
 .founder { background: #f3eee4; }
-.photo-placeholder { overflow: hidden; background-image: linear-gradient(135deg,rgba(255,255,255,.16),transparent 45%),repeating-linear-gradient(45deg,transparent,transparent 18px,rgba(17,16,14,.035) 18px,rgba(17,16,14,.035) 19px); }
 .founder-copy { color: #625a51; font-size: 17px; }
 .founder-copy p { margin: 0 0 20px; }
 .founder-lead { font: italic 400 32px/1.2 "Instrument Serif",serif; color: #11100e; }
