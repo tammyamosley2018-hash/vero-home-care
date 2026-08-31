@@ -4,6 +4,24 @@
   transform: none;
 }
 
+/* Navigation is a separate surface; hero media begins below it. */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #11100e;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.site-header.scrolled {
+  background: #11100e;
+}
+
+.hero {
+  height: calc(100svh - 88px);
+}
+
 .phone-break { display: none; }
 
 /* Keep the temporary video indicator out of the hero copy area. */
@@ -88,6 +106,7 @@
   .audience-grid,.founder-grid { grid-template-columns: 1fr; gap: 48px; }
   .referral-grid { grid-template-columns: 1fr; gap: 42px; }
   .career-hero { min-height: 650px; padding: 150px 0 72px; }
+  .hero { height: calc(100svh - 76px); }
 }
 
 @media (max-width: 600px) {
