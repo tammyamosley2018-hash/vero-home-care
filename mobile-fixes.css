@@ -66,6 +66,9 @@
 }
 
 .credentials { background: #e6ded0; border-bottom: 1px solid rgba(17,16,14,.14); }
+.service { grid-template-columns: 1fr 1.2fr; }
+.mission-note { margin: 48px 0 0; font: italic 400 25px/1.35 "Instrument Serif",serif; color: #756c61; }
+.principles > div { grid-template-columns: 1fr; }
 .promise-grid { display: block; }
 .promise-copy { max-width: 940px; margin: 0 auto; }
 .promise-copy .display { max-width: 850px; }
@@ -116,6 +119,8 @@
   .credential-grid > div { border-bottom: 1px solid rgba(17,16,14,.14); }
   .audience-grid,.founder-grid { grid-template-columns: 1fr; gap: 48px; }
   .referral-grid { grid-template-columns: 1fr; gap: 42px; }
+  .service { grid-template-columns: 1fr; }
+  .service p { grid-column: auto; }
   .career-hero { min-height: 650px; padding: 150px 0 72px; }
   .hero { height: calc(100svh - 76px); }
 }
