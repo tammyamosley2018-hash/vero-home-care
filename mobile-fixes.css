@@ -93,6 +93,18 @@
 .referral-copy { color: #a9a197; font-size: 17px; }
 .referral-copy p { margin: 0 0 22px; }
 .referral-copy .button { margin-top: 10px; }
+.standards { background: #e6ded0; }
+.standards-heading { max-width: 760px; margin-bottom: 68px; }
+.standards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(17,16,14,.16); border: 1px solid rgba(17,16,14,.16); }
+.standard-card { padding: 42px; background: #f3eee4; }
+.standard-card.payment-card { grid-column: 1 / -1; display: grid; grid-template-columns: .7fr 1fr; column-gap: 70px; }
+.standard-card.payment-card .standard-label,.standard-card.payment-card h3 { grid-column: 1; }
+.standard-card.payment-card > p { grid-column: 2; }
+.standard-label { display: block; margin-bottom: 20px; color: #756c61; font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.standard-card h3 { margin: 0 0 18px; font: 400 32px/1.05 "Instrument Serif",serif; }
+.standard-card p { margin: 0; color: #625a51; font-size: 15px; }
+.standard-card .payment-note { margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(17,16,14,.16); font-size: 13px; }
+.license-line { margin: 24px auto 0; padding-top: 20px; width: min(1220px,calc(100% - 64px)); border-top: 1px solid rgba(255,255,255,.1); color: #777168; text-align: center; font-size: 9px; letter-spacing: .08em; }
 .contact-details { margin: 28px 0; border-top: 1px solid rgba(255,255,255,.15); }
 .contact-details a,.contact-details p { display: block; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.15); color: #fff; text-decoration: none; margin: 0; overflow-wrap: anywhere; }
 .contact-details small { display: block; margin: 0 0 2px; color: #8f887f; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
@@ -119,6 +131,9 @@
   .credential-grid > div { border-bottom: 1px solid rgba(17,16,14,.14); }
   .audience-grid,.founder-grid { grid-template-columns: 1fr; gap: 48px; }
   .referral-grid { grid-template-columns: 1fr; gap: 42px; }
+  .standards-grid { grid-template-columns: 1fr; }
+  .standard-card.payment-card { grid-column: auto; display: block; }
+  .standard-card.payment-card > p { margin-top: 18px; }
   .service { grid-template-columns: 1fr; }
   .service p { grid-column: auto; }
   .career-hero { min-height: 650px; padding: 150px 0 72px; }
@@ -142,4 +157,6 @@
   .credential-grid > div { border-right: 0; padding: 25px 4px; display: grid; grid-template-columns: 95px 1fr; align-items: center; gap: 16px; }
   .credential-grid strong { font-size: 34px; }
   .credential-grid span { margin: 0; }
+  .standard-card { padding: 30px 24px; }
+  .license-line { width: calc(100% - 40px); }
 }
