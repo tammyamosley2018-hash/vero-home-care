@@ -8,6 +8,7 @@
 .site-header {
   position: sticky;
   top: 0;
+  z-index: 1000;
   background: #11100e;
   border-bottom: 1px solid rgba(255,255,255,.1);
   backdrop-filter: none;
@@ -59,6 +60,29 @@
   z-index: 2;
   border: 1px solid rgba(255, 255, 255, .5);
   border-radius: 50%;
+  color: #fff;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.menu-button span {
+  position: absolute;
+  left: 11px;
+  width: 20px;
+  margin: 0;
+  transition: top .2s ease, transform .2s ease;
+}
+
+.menu-button span:first-child { top: 17px; }
+.menu-button span:last-child { top: 24px; }
+
+.menu-button[aria-expanded="true"] span:first-child {
+  top: 21px;
+  transform: rotate(45deg);
+}
+
+.menu-button[aria-expanded="true"] span:last-child {
+  top: 21px;
+  transform: rotate(-45deg);
 }
 
 @media (min-width: 901px) {
@@ -136,6 +160,21 @@
     z-index: 2;
     border: 1px solid rgba(255, 255, 255, .5);
     border-radius: 50%;
+  }
+  .mobile-nav {
+    position: absolute;
+    z-index: 1001;
+    top: 100%;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    height: calc(100vh - 76px);
+    height: calc(100dvh - 76px);
+    padding: 38px max(24px, env(safe-area-inset-right)) max(38px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    background: #11100e;
   }
   .credential-grid { grid-template-columns: 1fr 1fr; }
   .credential-grid > div:nth-child(2) { border-right: 0; }

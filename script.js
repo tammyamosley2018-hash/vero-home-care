@@ -12,6 +12,9 @@ function setMenu(open) {
 menuButton.addEventListener('click', () => setMenu(mobileNav.hidden));
 mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900 && !mobileNav.hidden) setMenu(false);
+});
 window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
